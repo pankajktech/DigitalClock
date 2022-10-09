@@ -7,6 +7,8 @@ function updateTime() {
 
     let seconds = dateTime.getSeconds()
 
+    // let milliseconds = dateTime.getMilliseconds()
+
     let am_or_pm = document.getElementById("am_or_pm")
     if (hours >= 12) {
         am_or_pm.innerHTML = "PM"
@@ -22,5 +24,6 @@ function updateTime() {
     document.getElementById("hours").innerHTML = hours
     document.getElementById("minutes").innerHTML = minutes
     document.getElementById("seconds").innerHTML = seconds
+    // document.getElementById("milliseconds").innerHTML = milliseconds
 }
 setInterval(updateTime, 1)

@@ -1,13 +1,17 @@
+
+const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
 function updateTime() {
     let dateTime = new Date()
+    let day = dateTime.getDate()
+    let month = Months[dateTime.getMonth()]
+    let year = dateTime.getFullYear()
 
     let hours = dateTime.getHours()
 
     let minutes = dateTime.getMinutes()
 
     let seconds = dateTime.getSeconds()
-
-    // let milliseconds = dateTime.getMilliseconds()
 
     let am_or_pm = document.getElementById("am_or_pm")
     if (hours >= 12) {
@@ -16,11 +20,15 @@ function updateTime() {
     } else {
         am_or_pm.innerHTML = "AM"
     }
-    if(hours >= 12){
-        hours = hours-12
+    if (hours >= 12) {
+        hours = hours - 12
     }
 
-   
+
+    document.getElementById("day").innerHTML = day
+    document.getElementById("month").innerHTML = month
+    document.getElementById("year").innerHTML = year
+
     document.getElementById("hours").innerHTML = hours
     document.getElementById("minutes").innerHTML = minutes
     document.getElementById("seconds").innerHTML = seconds

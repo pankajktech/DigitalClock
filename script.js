@@ -1,9 +1,10 @@
-
+const Day = ["Monday", "Tuesday", "Wednesday", "Thursday", "riday","Saturday", "Sunday"]
 const Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 function updateTime() {
     let dateTime = new Date()
-    let day = dateTime.getDate()
+    // let day = Day[dateTime.getDay() + 1]
+    let date = dateTime.getDate()
     let month = Months[dateTime.getMonth()]
     let year = dateTime.getFullYear()
 
@@ -25,7 +26,8 @@ function updateTime() {
     }
 
 
-    document.getElementById("day").innerHTML = day
+    // document.getElementById("day").innerHTML = day
+    document.getElementById("date").innerHTML = date
     document.getElementById("month").innerHTML = month
     document.getElementById("year").innerHTML = year
 

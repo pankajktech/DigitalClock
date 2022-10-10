@@ -3,7 +3,6 @@ const Months = ["January", "February", "March", "April", "May", "June", "July", 
 
 function updateTime() {
     let dateTime = new Date()
-    // let day = Day[dateTime.getDay() + 1]
     let date = dateTime.getDate()
     let month = Months[dateTime.getMonth()]
     let year = dateTime.getFullYear()
@@ -26,7 +25,6 @@ function updateTime() {
     }
 
 
-    // document.getElementById("day").innerHTML = day
     document.getElementById("date").innerHTML = date
     document.getElementById("month").innerHTML = month
     document.getElementById("year").innerHTML = year
@@ -34,6 +32,5 @@ function updateTime() {
     document.getElementById("hours").innerHTML = hours
     document.getElementById("minutes").innerHTML = minutes
     document.getElementById("seconds").innerHTML = seconds
-    // document.getElementById("milliseconds").innerHTML = milliseconds
 }
 setInterval(updateTime, 1)
